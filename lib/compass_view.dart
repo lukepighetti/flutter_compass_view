@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
 
 class CompassView extends StatefulWidget {
@@ -48,8 +49,9 @@ class _CompassViewState extends State<CompassView> {
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Icon(
-                    Icons.keyboard_arrow_up,
+                    CupertinoIcons.arrowtriangle_up_fill,
                     color: widget.bearingColor,
+                    size: 20,
                   ),
                 ),
               ),

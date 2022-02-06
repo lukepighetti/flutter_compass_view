@@ -19,15 +19,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: const MyHomePage(title: 'flutter_compass_view'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -50,11 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
         final heading = snapshot.data?.heading ?? 0;
 
         return Scaffold(
-          appBar: AppBar(
-            title: Text(widget.title),
-          ),
+          backgroundColor: Colors.black,
           body: Align(
-            alignment: const Alignment(0, -0.5),
+            alignment: const Alignment(0, -0.2),
             child: CompassView(
               bearing: _bearing,
               heading: heading,
